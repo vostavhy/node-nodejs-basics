@@ -1,11 +1,12 @@
 import { fileURLToPath } from 'url';
 import { writeFile } from 'fs/promises';
+import { fsError } from '../utils/constants.js';
 import path from 'path';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
 export const create = async () => {
+  const __filename = fileURLToPath(import.meta.url);
+  const __dirname = path.dirname(__filename);
+
   try {
     await writeFile(
       path.join(__dirname, 'files', 'fresh.txt'),
@@ -13,7 +14,7 @@ export const create = async () => {
       { flag: 'ax' }
     );
   } catch (error) {
-    throw new Error('FS operation failed');
+    throw fsError;
   }
 };
 
