@@ -1,6 +1,8 @@
 import { fileURLToPath } from 'url';
 import { createReadStream, createWriteStream } from 'fs';
 import { createGzip } from 'zlib';
+import { pipeline } from 'stream';
+import { promisify } from 'util';
 import path from 'path';
 
 export const compress = async () => {
@@ -14,5 +16,7 @@ export const compress = async () => {
   const output = createWriteStream(pathToWrite);
   const gzip = createGzip();
 
-  input.pipe(gzip).pipe(output);
+  const pipe = promisify(pipeline);
+
+  await pipe(input, gzip, output);
 };
