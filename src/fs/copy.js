@@ -13,7 +13,6 @@ export const copy = async () => {
 
     await mkdir(copyFolder);
     const fileNames = await readdir(filesFolder, { withFileTypes: true });
-    console.log(fileNames);
 
     for (let file of fileNames) {
       await copyFile(
@@ -22,7 +21,6 @@ export const copy = async () => {
       );
     }
   } catch (error) {
-    console.log(error);
     throw fsError;
   }
 };
