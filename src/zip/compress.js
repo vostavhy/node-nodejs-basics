@@ -16,5 +16,3 @@ export const compress = async () => {
 
   input.pipe(gzip).pipe(output);
 };
-
-compress();
