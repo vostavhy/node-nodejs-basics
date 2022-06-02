@@ -16,6 +16,7 @@ export const decompress = async () => {
   const output = createWriteStream(pathToWrite);
   const unzip = createUnzip();
 
-  pipe = promisify(pipeline);
+  const pipe = promisify(pipeline);
+
   await pipe(input, unzip, output);
 };
