@@ -24,5 +24,3 @@ export const copy = async () => {
     throw fsError;
   }
 };
-
-copy();
