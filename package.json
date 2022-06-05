@@ -11,7 +11,8 @@
     "fs:delete": "node src/fs/delete.js",
     "fs:list": "node src/fs/list.js",
     "fs:rename": "node src/fs/rename.js",
-    "cli:args": "node src/cli/args.js --propName value --prop2Name value2"
+    "cli:args": "node src/cli/args.js --propName value --prop2Name value2",
+    "cli:env": "node src/cli/env.js"
   },
   "repository": {
     "type": "git",

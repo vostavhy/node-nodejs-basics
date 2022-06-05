@@ -8,3 +8,5 @@ export const parseEnv = () => {
 
   console.log(resultArr);
 };
+
+parseEnv();
