@@ -31,3 +31,6 @@ const createMyServer = createServerHttp((_, res) => {
 });
 
 export { unknownObject, createMyServer };
+
+console.log(unknownObject);
+console.log(createMyServer);
