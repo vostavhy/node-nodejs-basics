@@ -20,3 +20,5 @@ export const compress = async () => {
 
   await pipe(input, gzip, output);
 };
+
+compress();
