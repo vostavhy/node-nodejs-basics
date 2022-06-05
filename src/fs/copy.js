@@ -1,11 +1,9 @@
 import { copyFile, mkdir, readdir } from 'fs/promises';
-import { fileURLToPath } from 'url';
-import { fsError } from '../utils/constants.js';
+import { fsError, getDirName } from '../utils/constants.js';
 import path from 'path';
 
 export const copy = async () => {
-  const __filename = fileURLToPath(import.meta.url);
-  const __dirname = path.dirname(__filename);
+  const __dirname = getDirName(import.meta.url);
 
   try {
     const filesFolder = path.join(__dirname, 'files');
