@@ -39,3 +39,5 @@ export const performCalculations = async () => {
 
   return results;
 };
+
+console.log(await performCalculations());
