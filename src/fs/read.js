@@ -16,3 +16,5 @@ export const read = async () => {
     throw fsError;
   }
 };
+
+read();
