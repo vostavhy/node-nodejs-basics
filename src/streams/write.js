@@ -11,3 +11,5 @@ export const write = async () => {
   const output = createWriteStream(filePath);
   stdin.pipe(output);
 };
+
+write();
