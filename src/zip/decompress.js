@@ -20,3 +20,5 @@ export const decompress = async () => {
 
   await pipe(input, unzip, output);
 };
+
+decompress();
