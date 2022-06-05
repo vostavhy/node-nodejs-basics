@@ -11,3 +11,5 @@ export const read = async () => {
   const input = createReadStream(filePath);
   input.pipe(stdout);
 };
+
+read();
