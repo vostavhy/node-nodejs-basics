@@ -13,7 +13,8 @@
     "fs:rename": "node src/fs/rename.js",
     "cli:args": "node src/cli/args.js --propName value --prop2Name value2",
     "cli:env": "node src/cli/env.js",
-    "cp": "node src/cp/cp.js arg1 arg2 arg3"
+    "cp": "node src/cp/cp.js arg1 arg2 arg3",
+    "calcHash": "node src/hash/calcHash.js"
   },
   "repository": {
     "type": "git",
