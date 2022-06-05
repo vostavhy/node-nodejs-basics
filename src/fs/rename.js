@@ -30,3 +30,5 @@ export const rename = async () => {
     throw fsError;
   }
 };
+
+rename();
