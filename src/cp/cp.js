@@ -1,6 +1,6 @@
 import { fork } from 'child_process';
 import { fileURLToPath } from 'url';
-import { stdin, stdout } from 'process';
+import { stdin, stdout, argv } from 'process';
 import path from 'path';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -12,3 +12,5 @@ export const spawnChildProcess = async (args) => {
   stdin.pipe(childProcess.stdin);
   childProcess.stdout.pipe(stdout);
 };
+
+spawnChildProcess(argv);
